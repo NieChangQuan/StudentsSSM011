@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ncq.ssm.dao.StudentDao">
+   <select id="queryAllStudents" resultType="Student">
+       SELECT
+          s.id,
+          s.name,
+          s.password,
+          s.age,
+          s.create_Time createTime,
+          s.c_id "c.id",
+          c.name "c.name"
+        FROM
+          ssm_0119.student s,course c
+
+   </select>
+</mapper>
